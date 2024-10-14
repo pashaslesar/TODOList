@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>TODO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./todo-app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            createTodoApp(document.getElementById('todo-app'), 'Дела папы', list = [{name: 'Поиграть с сыном в развивающий паззл', done: true}, {name: 'Покормить собаку', done: false}, { name: 'Приготовить ужин', done: false }]);
+        });
+    </script>
+</head>
+<body>
+    <div class="container mb-5">
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Мои дела</a>
+            <a href="dad.html" class="nav-link">Дела папы</a>
+            <a href="mom.html" class="nav-link">Дела мамы</a>      
+        </nav>
+    </div>
+    <div class="container" id="todo-app"></div>
+    <dialog id="myDialog" class="dialog">
+        Вы уверены, что хотите удалить этот пункт?
+        <br>
+        <button id="closeDialog" class="dialogButton">
+            Закрыть
+        </button>
+        <button id="dialogButton" class="deleteButton">
+            Удалить
+        </button>
+    </dialog>
+</body>
+</html>
